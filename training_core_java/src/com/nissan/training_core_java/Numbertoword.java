@@ -49,6 +49,7 @@ public static String ntw(double x)
 	}
 	int j=0;int l;
 	int z=x2;
+	String num0[]= {"zero","one","two","three","four","five","six","seven","eight","nine"};
 	if(x2>0)
 	{
 		wrd=wrd+"point ";
@@ -60,7 +61,7 @@ public static String ntw(double x)
 	while(j>0)
 	{
 		int digit=(int)(z/Math.pow(10,j-1));
-				wrd=wrd+num[digit]+" ";
+				wrd=wrd+num0[digit]+" ";
 				z=(int)(z%Math.pow(10,j-1));
 				j--;
 	}
@@ -71,7 +72,7 @@ public static String ntw(double x)
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the number upto 2 decimal places");
+		System.out.println("Enter a number, less than 1 lakh, upto 2 decimal places(Enter zero to exit)");
 		double a=sc.nextDouble();
 		while(a!=0)
 		{
@@ -79,7 +80,7 @@ public static String ntw(double x)
 		System.out.println("minus "+ntw(-a));
 			else
 		System.out.println(ntw(a));
-		System.out.println("Enter the number(Enter zero to exit)");
+		System.out.println("Enter a number, less than 1 lakh, upto 2 decimal places(Enter zero to exit)");
 		try {
 		a=sc.nextDouble();
 		}
